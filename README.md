@@ -277,6 +277,75 @@ git remote -v
 ---
 
 
+## 🔄 Recebendo alterações
+
+### 📥 `git pull`
+- Recebe atualizações do repositório remoto.
+- Cada branch pode ser atualizado com `git pull`.
+- Usado para atualizar a branch principal (ex: `master`) ou sincronizar mudanças feitas por outros desenvolvedores.
+
+```bash
+git pull
+```
+
+---
+
+## 📤 Enviando alterações
+
+### 🚀 `git push`
+- Envia alterações locais para o repositório remoto.
+- Pode ser usado para compartilhar mudanças de um branch com outros devs.
+- Utilizado ao finalizar uma tarefa para enviá-la ao repositório.
+
+```bash
+git push
+```
+
+---
+
+## 🌐 Utilizando o remote
+
+### 🔗 `git remote`
+- Permite adicionar, visualizar ou remover repositórios remotos.
+- Exemplo de adicionar um repositório remoto:
+
+```bash
+git remote add origin <link-do-repo>
+```
+
+---
+
+## 📦 Trabalhando com submódulos
+
+### 🧩 `git submodule`
+- Submódulos permitem manter múltiplos projetos dentro de um só repositório.
+- Permite adicionar uma dependência sem misturar estruturas de projeto.
+- Adicionando um submódulo:
+
+```bash
+git submodule add <url-do-repo>
+```
+
+- Verificando submódulos:
+
+```bash
+git submodule
+```
+
+---
+
+## 🔄 Atualizando submódulos
+
+### 🔃 `git push --recurse-submodules=on-demand`
+- Commit as mudanças normalmente.
+- Para atualizar o repositório do submódulo:
+
+```bash
+git push --recurse-submodules=on-demand
+```
+
+---
+
 | 🌎 LinkedIn | 👨‍💻 **Autor** |
 |------------|---------------|
 | [LinkedIn](https://www.linkedin.com/in/albert-backend-java-spring-boot/) | [Albert Silva](https://www.linkedin.com/in/albert-backend-java-spring-boot/) |
