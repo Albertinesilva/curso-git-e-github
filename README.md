@@ -398,6 +398,70 @@ git describe --all
 ```
 ---
 
+### 🧹 Limpando arquivos untracked
+
+- O comando `git clean` vai verificar e limpar arquivos que não estão sendo *trackeados*;
+- Ou seja, todos que você não utilizou `git add`;
+- Utilizado para arquivos que são gerados automaticamente, por exemplo, e atrapalham a visualização do que é realmente importante.
+```bash
+git clean -n    # Mostra os arquivos que seriam removidos
+git clean -f    # Remove os arquivos não trackeados
+```
+---
+
+### ⚙️ Otimizando o repositório
+
+- O comando `git gc` é uma abreviação para *garbage collector*;
+- Ele identifica arquivos que não são mais necessários e os exclui;
+- Isso fará com que o repositório seja otimizado em questões de performance.
+```bach
+git gc
+```
+---
+
+### 🧪 Checando integridade de arquivos
+
+- O comando `git fsck` é uma abreviação de *File System ChecK*;
+- Esta instrução verifica a integridade de arquivos e sua conectividade;
+- Verificando assim possíveis corrupções em arquivos;
+- Comando de rotina, utilizado para ver se está tudo certo com nossos arquivos.
+```bach
+git fsck
+```
+---
+
+### 📜 Reflog
+
+- O `git reflog` vai mapear todos os seus passos no repositório, até uma mudança de branch é inserida neste log;
+- Já o `git log`, que vimos anteriormente, apenas armazena os commits de um branch;
+- Os *reflogs* ficam salvos até expirar, o tempo de expiração padrão é de 30 dias.
+```bach
+git reflog
+```
+---
+
+### ♻️ Recuperando arquivos com reflog
+
+- Podemos avançar e também retroceder nas *hashs* do reflog;
+- Para isso utilizamos o comando `git reset --hard <hash>`;
+- Caso você tenha algo que queira salvar, pode utilizar o `git stash` antes;
+- Lembrando: o reflog expira com o tempo!
+```bach
+git stash                    # Salva alterações atuais antes de resetar
+git reflog                   # Lista todas as referências do reflog
+git reset --hard <hash>      # Retorna para um ponto específico
+```
+---
+
+### 📦 Transformando o repo para arquivo
+
+- Com o comando `git archive` podemos transformar o repositório em um arquivo compactado, por exemplo;
+- O comando é:  
+```bash
+git archive --format zip --output master_files.zip master
+```
+---
+
 | 🌎 LinkedIn | 👨‍💻 **Autor** |
 |------------|---------------|
 | [LinkedIn](https://www.linkedin.com/in/albert-backend-java-spring-boot/) | [Albert Silva](https://www.linkedin.com/in/albert-backend-java-spring-boot/) |
