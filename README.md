@@ -440,7 +440,7 @@ git push --recurse-submodules=on-demand
 
 ---
 
-<h1 align="center">📘 Git - Inspeções e Logs</h1>
+<h2 align="center">📘 Git - Inspeções e Logs</h2>
 
 ### 📄 Exibindo informações
 
@@ -578,6 +578,62 @@ git reset --hard <hash>      # Retorna para um ponto específico
 ```bash
 git archive --format zip --output master_files.zip master
 ```
+---
+
+<h2 align="center">🛠️ Rebase interativo passo a passo</h2>
+
+O `git rebase -i` (rebase interativo) é uma forma poderosa de reescrever o histórico de commits. Ele permite **editar mensagens, excluir, unir (squash)** ou **organizar commits** de forma limpa e controlada.
+
+### 🧩 Exemplos de comandos
+### ✅ Rebase por código do commit:
+
+```bach
+git rebase -i fc0bdae
+```
+- Neste exemplo, `fc0bdae` é o hash do commit anterior ao primeiro que você deseja alterar.
+
+```bach
+git rebase main minha-feature -i
+```
+- Esse comando reescreve o histórico da branch `minha-feature` usando a branch `main` como base. Útil ao usar branches privadas, para depois limpar os commits antes de subir ao repositório.
+
+### 🔤 Comandos no editor interativo
+```bach
+pick 27354b3 Introdução com alguns Tópicos
+pick 36403b9 Conceitos e Formatação do Readme.md
+```
+
+### Substitua `pick` por:
+- `r` ou `reword`: altera a **mensagem** do commit;
+- `e` ou `edit`: permite **editar o conteúdo** do commit;
+- `s` ou `squash`: une esse commit ao anterior e mantém as mensagens;
+- `f` ou `fixup`: une esse commit ao anterior e **descarta a mensagem** atual;
+- `d` ou `drop`: **remove** o commit;
+
+### ⌨️ Controles no editor (modo VIM)
+- Entrar no modo edição: pressione `i`
+- Sair do modo edição: pressione `ESC`
+- Salvar e sair: digite `:x` e pressione `ENTER`
+- Forçar saída (se necessário): `:x!`
+
+### ✅ Finalizando o rebase
+Após salvar, o Git pode pedir para:
+```bach
+git rebase --continue
+```
+- Caso haja conflitos, resolva-os, faça `git add` e continue o rebase.
+
+### 🔁 Retornando à branch original
+Se estiver em modo `detached HEAD`:
+```bach
+git checkout main
+```
+### 📤 Atualizando o GitHub após rebase
+Se você alterou o histórico com `rebase`, será necessário forçar o push:
+```bach
+git push origin main --force
+```
+⚠️ Atenção: Use `--force` com cuidado para não sobrescrever o trabalho de outras pessoas.
 
 ---
 
