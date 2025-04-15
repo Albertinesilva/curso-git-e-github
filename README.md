@@ -345,6 +345,52 @@ git push --recurse-submodules=on-demand
 ```
 
 ---
+<h1 align="center">📘 Git - Inspeções e Logs</h1>
+
+### 📄 Exibindo informações
+ ● O comando `git show` nos dá diversas informações úteis; 
+  ```bach
+git show
+```
+ ● Ele nos dá as informações do branch atual e também seus commits;  
+ ● As modificações de arquivos entre cada commit também são exibidas;  
+ ● Podemos exibir as informações de tags também com: `git show <tag>`
+ ```bach
+git show <tag>
+```
+---
+
+### 🧮 Exibindo diferenças
+ ● O comando `git diff` serve para exibir as diferenças de um branch;  
+  ```bach
+git diff
+```
+ ● Quando utilizado as diferenças do branch atual com o remoto serão exibidas no terminal;  
+ ● Podemos também verificar a diferença entre arquivos: `git diff <arquivo> <arquivo_b>`  
+ ```bach
+git diff <arquivo> <arquivo_b>
+```
+---
+
+### 📊 Log resumido
+ ● O comando `git shortlog` nos dá um log resumido do projeto;  
+ ● Cada commit será unido por nome do autor;  
+ ● Podemos então saber quais commits foram enviados ao projeto e por quem.
+ ```bach
+git shortlog
+```
+---
+
+### 🏷️ Utilizando o describe
+ ● Com o comando `git describe --tags` podemos verificar todas as tags do nosso projeto; 
+ ```bach
+git describe --tags
+```
+ ● Com a opção `--all` recebemos também a referência das tags;  
+```bach
+git describe --all
+```
+---
 
 | 🌎 LinkedIn | 👨‍💻 **Autor** |
 |------------|---------------|
