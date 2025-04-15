@@ -6,7 +6,8 @@
 - Permite criar versões diferentes de um software e alternar entre elas;
 - Cada membro da equipe pode trabalhar em uma versão distinta;
 - Ferramentas populares: `Git`, `SVN`.
-
+- Controlar versões evita conflitos e facilita colaboração simultânea;
+- Mantém um histórico claro do progresso e das decisões de desenvolvimento.
 ---
 
 ### 🔧 O que é Git?
@@ -15,7 +16,8 @@
 - Focado em alto desempenho;
 - Utiliza criptografia para segurança;
 - Projeto de código aberto.
-
+- Git é distribuído: cada desenvolvedor possui uma cópia completa do histórico do projeto;
+- Permite trabalho offline com sincronização posterior ao repositório remoto.
 ---
 
 ### 📂 O que é um Repositório?
@@ -23,7 +25,8 @@
 - Cada projeto normalmente tem um repositório;
 - É possível criar repositórios locais e remotos (ex: GitHub);
 - Todos do time podem clonar e criar versões locais do repositório.
-
+- Pode conter diretórios, arquivos, documentação e histórico de commits;
+- Um repositório remoto é geralmente compartilhado via HTTP ou SSH.
 ---
 
 ### 👤 Configurar nome e email do Git
@@ -31,7 +34,9 @@
 git config --global user.name "Seu Nome"
 git config --global user.email "seu@email.com"
 ```
-
+- Essa configuração é usada para identificar o autor dos commits;
+- A flag --global define os dados para todos os projetos no computador;
+- Para configuração local (por projeto), remova --global e execute dentro do repositório desejado.
 ---
 
 ### 📦 Criando Repositórios
@@ -41,22 +46,26 @@ git init
 - Cria os arquivos necessários e inicia o Git no projeto;
 - O diretório passa a ser monitorado pelo Git;
 - Os arquivos de controle ficam na pasta oculta `.git`.
-
+- Esse comando deve ser executado uma vez ao iniciar o projeto.
 ---
 
 ### 🐙 O que é o GitHub?
 - Plataforma para hospedagem e gerenciamento de repositórios Git;
 - Muito utilizado para colaboração entre devs;
 - Gratuito para projetos públicos e privados.
-
+- Integrações com CI/CD, wikis, issues e pull requests;
+- Facilita o trabalho em equipe e a revisão de código.
 ---
 
 ### 🚀 Enviando Repositórios para o GitHub
 - Criar projeto no GitHub;
 - Inicializar o Git local;
 - Conectar ao repositório remoto;
-- Enviar com `git push`.
-
+```bach
+git remote add origin https://github.com/usuario/repositorio.git
+```
+- Enviar com `git push -u origin main` (ou master, dependendo do nome do branch).
+- O `-u` define `origin main` como padrão para os próximos `git push`.
 ---
 
 ### 🔍 Verificando mudanças no projeto
@@ -65,7 +74,7 @@ git status
 ```
 - Mostra arquivos modificados, adicionados ou removidos;
 - Usado com frequência para monitorar o estado atual do projeto.
-
+- Indica se arquivos estão no `staging` ou aguardando `commit`.
 ---
 
 ### ➕ Adicionando arquivos ao projeto
@@ -76,7 +85,7 @@ git add pasta/            # Todos os arquivos da pasta
 ```
 - Move os arquivos para o "staging area";
 - Só arquivos adicionados serão salvos no commit.
-
+- A ordem correta: `git add` → `git commit`.
 ---
 
 ### 💾 Salvando alterações do projeto (commit)
@@ -86,7 +95,7 @@ git commit -a -m "mensagem"           # Adiciona + commita arquivos modificados
 ```
 - Registra alterações no repositório;
 - Boa prática: usar mensagens claras e objetivas.
-
+- A flag `-a` adiciona apenas arquivos modificados (não novos).
 ---
 
 ### ☁️ Enviando código ao repositório remoto
@@ -94,7 +103,7 @@ git commit -a -m "mensagem"           # Adiciona + commita arquivos modificados
 git push
 ```
 - Envia os commits locais para o repositório remoto.
-
+- Normalmente usado após commit para sincronizar com o GitHub.
 ---
 
 ### ⬇️ Recebendo mudanças do repositório remoto
@@ -102,7 +111,6 @@ git push
 git pull
 ```
 - Atualiza o projeto local com alterações feitas remotamente.
-
 ---
 
 ### 📥 Clonando repositórios
@@ -110,7 +118,14 @@ git pull
 git clone https://github.com/usuario/repositorio.git
 ```
 - Cria uma cópia local do repositório remoto.
-
+```bash
+git clone https://github.com/usuario/repositorio.git .
+```
+- Clona o repositório remoto diretamente na pasta atual, sem criar uma subpasta com o nome do repositório. Ideal para quando você já está em uma pasta vazia preparada para receber o projeto.
+```bash
+git clone https://github.com/usuario/repositorio.git nome_pasta
+```
+- Clona o repositório remoto e define um nome personalizado para a pasta onde o projeto será armazenado localmente.
 ---
 
 ### ❌ Removendo arquivos do repositório
@@ -118,7 +133,7 @@ git clone https://github.com/usuario/repositorio.git
 git rm arquivo.txt
 ```
 - Remove arquivo do projeto e do controle de versão.
-
+- Necessário fazer commit para finalizar a remoção.
 ---
 
 ### 🕓 Histórico de alterações
@@ -126,7 +141,8 @@ git rm arquivo.txt
 git log
 ```
 - Lista todos os commits feitos no projeto.
-
+- Usa `q` para sair da visualização;
+- Pode ser personalizado com `git log --oneline` ou `--graph`.
 ---
 
 ### ✏️ Renomeando arquivos
@@ -134,7 +150,7 @@ git log
 git mv antigo.txt novo.txt
 ```
 - Renomeia e mantém o controle de versão do arquivo.
-
+- Equivalente a mv seguido de `git add` e `git rm`.
 ---
 
 ### ↩️ Desfazendo alterações
@@ -142,7 +158,7 @@ git mv antigo.txt novo.txt
 git checkout nome-do-arquivo
 ```
 - Volta o arquivo para o estado do último commit.
-
+- Para desfazer commits inteiros: `git reset`
 ---
 
 ### 🙈 Ignorando arquivos no projeto
@@ -154,7 +170,7 @@ dist/
 .env
 ```
 - Arquivos listados não serão versionados.
-
+- Importante manter esse arquivo versionado no projeto.
 ---
 
 ### 🧹 Desfazendo todas as alterações
@@ -163,7 +179,6 @@ git reset --hard
 ```
 - Remove todas as alterações e commits locais;
 - **Cuidado:** essa ação é irreversível!
-
 ---
 
 ### 📎 Comandos rápidos
@@ -184,7 +199,7 @@ git reset --hard
 
 ---
 
-## 📦 Branches
+### 📦 Branches
 
 ### 🌿 O que é um branch?
 - São ramificações do projeto;
@@ -216,10 +231,9 @@ git branch -d nome-da-branch
 ```bash
 git merge nome-da-branch
 ```
-
 ---
 
-## 💾 Stash
+### 💾 Stash
 
 ### 📥 Guardando alterações
 ```bash
@@ -237,10 +251,9 @@ git stash apply stash@{0}
 git stash clear
 git stash drop stash@{0}
 ```
-
 ---
 
-## 🏷️ Tags
+### 🏷️ Tags
 
 ### 🏷️ Criando tags
 ```bash
@@ -261,14 +274,13 @@ git push origin --tags
 
 ---
 
-## 🔍 Encontrando novos branches remotos
+### 🔍 Encontrando novos branches remotos
 ```bash
 git fetch
 ```
-
 ---
 
-## Comandos adicionais úteis
+### 💡Comandos adicionais úteis
 
 ### 🌐 Ver o repositório remoto
 ```bash
@@ -276,8 +288,7 @@ git remote -v
 ```
 ---
 
-
-## 🔄 Recebendo alterações
+### 🔄 Recebendo alterações
 
 ### 📥 `git pull`
 - Recebe atualizações do repositório remoto.
@@ -287,10 +298,9 @@ git remote -v
 ```bash
 git pull
 ```
-
 ---
 
-## 📤 Enviando alterações
+### 📤 Enviando alterações
 
 ### 🚀 `git push`
 - Envia alterações locais para o repositório remoto.
@@ -300,10 +310,9 @@ git pull
 ```bash
 git push
 ```
-
 ---
 
-## 🌐 Utilizando o remote
+### 🌐 Utilizando o remote
 
 ### 🔗 `git remote`
 - Permite adicionar, visualizar ou remover repositórios remotos.
@@ -312,10 +321,9 @@ git push
 ```bash
 git remote add origin <link-do-repo>
 ```
-
 ---
 
-## 📦 Trabalhando com submódulos
+### 📦 Trabalhando com submódulos
 
 ### 🧩 `git submodule`
 - Submódulos permitem manter múltiplos projetos dentro de um só repositório.
@@ -331,10 +339,9 @@ git submodule add <url-do-repo>
 ```bash
 git submodule
 ```
-
 ---
 
-## 🔄 Atualizando submódulos
+### 🔄 Atualizando submódulos
 
 ### 🔃 `git push --recurse-submodules=on-demand`
 - Commit as mudanças normalmente.
@@ -343,7 +350,6 @@ git submodule
 ```bash
 git push --recurse-submodules=on-demand
 ```
-
 ---
 <h1 align="center">📘 Git - Inspeções e Logs</h1>
 
