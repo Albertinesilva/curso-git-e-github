@@ -637,6 +637,34 @@ git push origin main --force
 
 ---
 
+### ✅ Exemplos com `&&` para agilizar `comandos Git`
+O operador `&&` permite encadear vários comandos no terminal. Ele executa o próximo comando **somente se o anterior for bem-sucedido**.
+
+🔹 1. Adicionar, comitar e fazer push de uma vez só
+```bach
+git add . && git commit -m "mensagem do commit" && git push
+```
+🔹 2. Adicionar um arquivo específico, comitar e fazer push
+```bach
+git add README.md && git commit -m "Atualiza README com exemplos de uso" && git push
+```
+🔹 3. Reverter alterações em um arquivo, adicionar e comitar
+```bach
+git restore nome-do-arquivo.txt && git add nome-do-arquivo.txt && git commit -m "Reverte mudanças no arquivo"
+```
+🔹 4. Mudar de branch, dar pull e abrir a pasta no VS Code
+```bach
+git checkout main && git pull && code .
+```
+🔹 5. Após um rebase, continuar e fazer push forçado
+```bach
+git rebase --continue && git push --force
+```
+### 📝 Dica: no PowerShell (Windows), substitua && por ;:
+```bach
+git add .; git commit -m "Mensagem"; git push
+```
+
 | 🌎 LinkedIn                                                              | 👨‍💻 **Autor**                                                                 |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | [LinkedIn](https://www.linkedin.com/in/albert-backend-java-spring-boot/) | [Albert Silva](https://www.linkedin.com/in/albert-backend-java-spring-boot/) |
