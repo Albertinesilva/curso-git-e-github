@@ -665,6 +665,8 @@ git rebase --continue && git push --force
 git add .; git commit -m "Mensagem"; git push
 ```
 
+[➡️ Próximo](conceitos-avancados.md)
+
 | 🌎 LinkedIn                                                              | 👨‍💻 **Autor**                                                                 |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | [LinkedIn](https://www.linkedin.com/in/albert-backend-java-spring-boot/) | [Albert Silva](https://www.linkedin.com/in/albert-backend-java-spring-boot/) |
