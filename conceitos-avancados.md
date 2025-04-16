@@ -410,6 +410,93 @@ Permite criar listas de tarefas diretamente no README:
 - [ ] Ajustar responsividade do layout
 ---
 
+<h2 align="center">🌐 Conceitos essenciais do GitHub</h2>
+
+📦 Criando repositório
+
+- No GitHub inicializamos os repositórios, e temos algumas informações importantes para - preencher, vamos vê-las em detalhes;
+- Algumas delas são: Nome do repo, descrição, licença;
+- Tudo poderá ser alterado ao longo do seu projeto, mas é interessante conhecer os detalhes das informações para configurar um projeto;
+- É possível também iniciar o repositório com um arquivo `README.md`, `.gitignore` e escolher a visibilidade (público ou privado).
+
+📁 A aba Code
+
+- Na aba Code teremos acesso a informações importantes, como o próprio código fonte;
+- Podemos checar também uma documentação do projeto pelo `README.md`;
+- E os detalhes da licença do projeto;
+- Criar branches, adicionar arquivos e muito mais!
+- Também é possível clonar o repositório por HTTPS, SSH ou GitHub CLI.
+
+🐞 A aba Issue
+
+- Na aba Issue podemos criar tarefas ou possíveis bugs do projeto;
+- Interessante para a organização se manter ciente do que ainda precisa fazer ou corrigir;
+- Normalmente há um padrão para criação de novos issues;
+- Podemos utilizar o Markdown no texto também (igual o `README.md`);
+- A issue deve ter uma label e também um responsável;
+- É possível mencionar usuários com `@usuario` e referenciar outras issues ou pull requests com `#número`.
+
+🔃 A aba Pull Request
+
+- Na aba Pull Request é onde os colaboradores do projeto enviam código para resolver as issues ou adicionar novas funcionalidades ao projeto;
+- A ideia é que o código não seja inserido direto na master e sim passe por um pull request, para ser analisado;
+- O `pull request` pode ser revisado por membros da equipe antes de ser mesclado;
+- É possível adicionar comentários, checklists e aprovações antes do merge.
+
+📈 A aba Insights
+
+- Na aba Insights temos informações detalhadas do projeto, como:
+- Quem são os contribuidores, commits, forks e muito mais;
+- Interessante para entender como o projeto está andando e a sua evolução desde o início;
+- O pull request vem de um novo branch criado no projeto e enviado para o repo, com o incremento de código;
+- Também é possível visualizar gráficos de contribuição e análise de linguagens usadas.
+
+⚙️ A aba Actions
+
+- Na aba Actions é onde se cria as automatizações de deploy com integração em outros serviços;
+- Incluindo CI/CD (Continuous Integration / Continuous Development);
+- Ou seja, podemos criar uma rotina de atualizar a master automaticamente e outros processos;
+- As automações são configuradas por meio de arquivos `.yml` na pasta `.github/workflows`.
+
+📋 A aba Projects
+
+- Na aba Projects podemos criar um projeto e utilizar um quadro de tarefas;
+- Este processo é conhecido como Kanban e pode ajudar a organizar seu time, criando notas que podem virar issues;
+- Estrutura interessante: Backlog, Retorno de qualidade, Desenvolvimento, Teste, Finalizadas;
+- A tela lembra muito o software Trello;
+- Os cards do Kanban podem ser vinculados diretamente a issues e pull requests.
+
+📚 A aba Wiki
+
+- Na aba Wiki podemos criar uma documentação mais extensa para o projeto;
+- Como descrever funcionalidades, bugs conhecidos e não solucionados, entre outras funções;
+- A ideia é que seja um repositório de conhecimento sobre o projeto;
+- A Wiki pode conter várias páginas interligadas, como um manual do projeto.
+
+🔧 A aba Settings
+
+- Na aba Settings temos acesso a diversas configurações do projeto;
+- É onde podemos alterar o nome do repo ou remover/adicionar features;
+- E também é nela que adicionamos colaboradores ao projeto;
+- O repositório pode ser removido nesta aba;
+- Também é possível configurar o GitHub Pages, personalizar branches e permissões.
+
+✂️ Criando um Gist
+
+- Gist são pequenos blocos de código que podem ser hospedado no GitHub também;
+- Você pode armazenar uma solução que achou interessante para algum problema e não quer perder, por exemplo;
+- E o link do Gist pode ser compartilhado;
+- No fim das contas o Gist acaba sendo um repositório também;
+- Gists podem conter múltiplos arquivos e são públicos ou privados.
+
+🔎 Encontrando repositórios
+
+- O GitHub não serve só para salvar os nossos projetos, podemos encontrar muitos repos interessantes;
+- Podemos até aprender com isso também, olhando o código fonte de desenvolvedores experientes;
+- E não para por aí: você pode dar star nos projetos que gostou ou fork nos que deseja continuar em um repo próprio;
+- A aba “Explore” ajuda a encontrar repositórios populares, trending e recomendados.
+  
+
 | 🌎 LinkedIn                                                              | 👨‍💻 **Autor**                                                                 |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | [LinkedIn](https://www.linkedin.com/in/albert-backend-java-spring-boot/) | [Albert Silva](https://www.linkedin.com/in/albert-backend-java-spring-boot/) |
