@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Albert Silva de Jesus</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+        }
+
+        header h1 {
+            margin-top: 1rem;
+            font-size: 2rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Olá Mundo!</p>
+    <header>
+        <img src="sua-foto.jpg" alt="Foto de Albert Silva de Jesus" />
+        <h1>Albert Silva de Jesus</h1>
+        <p>Desenvolvedor Web | Portfólio de Projetos</p>
+    </header>
+
+    <section class="projects">
+        <div class="project">
+            <a href="https://link-do-projeto1.com" target="_blank">
+                <img src="projeto1.jpg" alt="Projeto 1">
+                Projeto 1
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://link-do-projeto2.com" target="_blank">
+                <img src="projeto2.jpg" alt="Projeto 2">
+                Projeto 2
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://link-do-projeto3.com" target="_blank">
+                <img src="projeto3.jpg" alt="Projeto 3">
+                Projeto 3
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://link-do-projeto4.com" target="_blank">
+                <img src="projeto4.jpg" alt="Projeto 4">
+                Projeto 4
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Albert Silva de Jesus. Todos os direitos reservados.
+    </footer>
 </body>
+
 </html>
