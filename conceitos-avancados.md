@@ -1,4 +1,4 @@
-<h1 align="center">📘 Guia Git & GitHub</h1>
+<h1 align="center">📘Guia Git & GitHub - Parte 2</h1>
 
 ### 📦 Trabalhando com submódulos
 
@@ -495,7 +495,31 @@ Permite criar listas de tarefas diretamente no README:
 - Podemos até aprender com isso também, olhando o código fonte de desenvolvedores experientes;
 - E não para por aí: você pode dar star nos projetos que gostou ou fork nos que deseja continuar em um repo próprio;
 - A aba “Explore” ajuda a encontrar repositórios populares, trending e recomendados.
-  
+---
+
+<h2 align="center">🌐 O que é GitHub Pages</h2>
+
+- 📄 Uma forma de criar uma página estática nos servidores do GitHub;
+- 💸 Ou seja, uma alternativa gratuita para hospedar nosso portfólio;
+- ⚙️ Muito simples de colocar no ar, não precisa de domínio ou servidor;
+- 🏢 Muitas empresas utilizam para apresentar o seu projeto ou a própria documentação;
+- 🔒 O site é servido via HTTPS e pode ser personalizado com domínio próprio, se necessário.
+
+🚀 Como criar a página
+
+Você deve seguir alguns passos simples, veja:
+
+1. 📁 Criar um repositório com o nome nomedousuario.github.io
+    - O GitHub reconhece esse padrão como um site pessoal.
+2. 💻 Clonar o repositório no nosso computador
+    - Usando git clone https://github.com/nomedousuario/nomedousuario.github.io.
+3. 🧾 Adicionar o código do projeto na branch master
+    - Para repositórios pessoais, o GitHub Pages usa a branch master ou main.
+4. ⬆️ Enviar o código por meio de push
+    - Usar git add ., git commit -m "initial commit" e git push origin master.
+5. ✅ E pronto, você tem um site em https://nomedousuario.github.io
+    - O site geralmente leva poucos minutos para entrar no ar.
+---
 
 | 🌎 LinkedIn                                                              | 👨‍💻 **Autor**                                                                 |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
