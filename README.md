@@ -1,5 +1,26 @@
 <h1 align="center">📘 Guia Git & GitHub</h1>
 
+🚀 **Instalação e Configuração Inicial**
+
+💻 **Instalação Git no Windows**
+- Instalar git no Windows é muito fácil!
+- Acessar o site: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+- Fazer o download do executável;
+- E seguir as instruções.
+
+🐧 **Instalação Git no Linux**
+- Instalar git no Linux também é muito fácil!
+- Acessar o site: [https://git-scm.com/download/linux](https://git-scm.com/download/linux)
+- Teremos que seguir as instruções dependendo da nossa distro;
+- E iniciar a instalação com nosso gerenciador de pacotes.
+
+🧰 **Instalação do VS Code**
+- O VS Code é o editor que vamos utilizar no curso;
+- Porém não é uma obrigatoriedade, use o de sua preferência;
+- A grande jogada é que ele possui um terminal integrado, facilitando as nossas ações com o git;
+- Além de ser um editor super atualizado e que aceita diversas linguagens e ferramentas de programação.
+---
+
 📌 **O que é Controle de Versão?**
 
 - Uma técnica que ajuda a gerenciar o código-fonte de uma aplicação;
