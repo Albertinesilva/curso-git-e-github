@@ -286,8 +286,8 @@ git rebase --continue && git push --force
 git add .; git commit -m "Mensagem"; git push
 ```
 ---
+<h2 align="center">🧠 Boas Práticas com Commits e Branches</h2>
 
-### 🧠 Boas Práticas com Commits e Branches
 ✅ A importância do commit
 
 - O problema: commits sem sentido atrapalham o projeto;
@@ -317,6 +317,98 @@ git rebase <atual> <funcionalidade> -i
 - Durante o rebase interativo:
     - Escolha os commits para excluir com `drop` ou juntar com `squash`;
     - Renomeie mensagens com `reword`.
+
+🛠️ Dicas práticas com git commit
+
+- Evite commits genéricos como `Update`, `Changes`, `Fixes`.
+- Prefira algo como: `Corrige validação de e-mail no formulário de login`.
+- Use `git commit -v` para revisar as alterações no editor antes de confirmar.
+
+🌿 Nomeação de branches
+
+- Use nomes descritivos para as branches:
+    - `feature/adicionar-login`
+    - `bugfix/erro-validacao-email`
+    - `hotfix/ajuste-navbar-mobile`
+- Isso ajuda na leitura e organização do repositório.
+---
+
+📝 O que é Markdown?
+
+O Markdown é uma forma simples e intuitiva de adicionar estilo a textos na web, especialmente útil para documentações.
+
+- Permite exibir: trechos de código, links, imagens e muito mais.
+- Arquivos como `README.md` usam Markdown para criar uma documentação mais bonita e organizada.
+- Melhora a experiência de quem acessa seu repositório no GitHub.
+
+🖼️ Imagens
+
+Você pode adicionar imagens no markdown com a seguinte sintaxe:
+```bach
+![Texto Alt](link-da-imagem)
+```
+```bach
+![Logo GitHub](imag/GitHub-Mark.png)
+```
+- Você pode usar imagens externas ou armazenadas dentro do seu repositório.
+
+🔗 Links
+
+Markdown facilita a inserção de links:
+```bach
+[Texto do link](https://www.exemplo.com)
+```
+
+🏷️ Cabeçalhos
+
+Usamos o símbolo `#` para criar títulos, assim como em HTML (`h1`, `h2`, `h3`...):
+```bach
+# Título Principal (h1)
+## Subtítulo (h2)
+### Título menor (h3)
+```
+
+✨ Ênfase
+
+Dê estilo ao texto com os seguintes símbolos:
+
+- Negrito: `**texto**` ou `__texto__`
+- Itálico: `*texto*` ou `_texto_`
+- Um texto combinado
+
+✅ Listas
+
+Listas não ordenadas:
+
+```bach
+* Item 1
+* Item 2
+```
+Listas ordenadas:
+
+```bach
+1. Primeiro
+2. Segundo
+```
+
+💻 Código (GitHub)
+
+Use `crase tripla` para destacar blocos de código:
+
+```bash
+git status
+git add .
+git commit -m "mensagem"
+```
+
+📋 Task list (GitHub)
+
+Permite criar listas de tarefas diretamente no README:
+
+- [x] CSS do rodapé
+- [ ] CSS da página de contatos
+- [ ] Ajustar responsividade do layout
+---
 
 | 🌎 LinkedIn                                                              | 👨‍💻 **Autor**                                                                 |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
