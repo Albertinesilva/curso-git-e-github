@@ -276,6 +276,16 @@ git branch
 git branch nome-da-branch
 ```
 
+**Renomear localmente**
+```bash
+git branch -m nome-da-branch nome-da-branch-nova
+```
+
+**Enviar a nova branch para o GitHub e configurar tracking**
+```bash
+git push -u origin nome-da-branch
+```
+
 🔁 **Mudando de branch**
 
 ```bash
@@ -286,7 +296,7 @@ git checkout -b nova-branch   # cria e já muda para ela
 🗑️ **Deletando branch**
 
 ```bash
-git branch -d nome-da-branch
+git push origin --delete nome-da-branch ou git branch -d nome-da-branch
 ```
 
 🔀 **Unindo branches**
